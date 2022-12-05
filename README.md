@@ -1,1 +1,1 @@
-Python for higher level programming
+Python programming as a higher level language
