@@ -4,14 +4,15 @@
 #include <stddef.h>
 
 /**
- * is_palindrome- Checks if a singly linked list is a palindrome.
+ * is_palindrome - checks if a singly linked list is a palindrome
  * @head: Head pointer
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome.
+ * Return: 0 if it is not palindrome, 1 if it is palindrome.
  */
+
 int is_palindrome(listint_t **head)
 {
 	listint_t *node;
-	int values[9999], 1 = 0, c = 0;
+	int values[9999], i = 0, c = 0;
 
 	if ((!*head) || (!head))
 	{
