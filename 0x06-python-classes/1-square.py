@@ -7,7 +7,6 @@ class Square:
 
     def __init__(self, size):
         """
-
         Constructor.
 
         Args:
