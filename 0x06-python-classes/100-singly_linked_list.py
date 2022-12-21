@@ -6,20 +6,19 @@ class Node:
 
     def __init__(self, data, next_node=None):
         """initializes node instance
-
         Args:
             data: data in node
             next_node: next node in list"""
         self.data = data
         self.next_node = next_node
-
+    
     @property
     def data(self):
         """gets data"""
          return self.__data
      
-     @data.setter
-     def data(self, value):
+    @data.setter
+    def data(self, value):
          """sets data"""
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
@@ -38,30 +37,29 @@ class Node:
         else:
             self.__next_node = value
 
-        class SinglyLinkedList:
-            """defines a singly linked list"""
+class SinglyLinkedList:
+    """defines a singly linked list"""
+    def __init__(self):
+        """initializes and prints list"""
+        self_head = None
 
-            def __init__(self):
-                """initializes and prints list"""
-                self.__head = None
+    def sorted_insert(self, value):
+        """inserts a node
+        Args:
+            value: data value of node"""
+        if self.__head is None:
+            self.__head = Node(value, self.__head)
+            return
+        new_node = Node(value, self.__head)
+        self.__head = new_node
 
-            def sorted_insert(self, value):
-                """inserts a node
-                Args:
-                    value: data value of node"""
-                if self.__head is None:
-                    self.__head = Node(value, self.__head)
-                    return
-                new_node = Node(value, self.__head)
-                self.__head = new_node
-
-            def __str__(self):
-                """ creates a list of linked list, sorts, and prints"""
-                my_list = []
-                runner = self.__head
-                while runner is not None:
-                    my_list.append(runner.data)
-                    runner = runner.next_node
-                my_list.sort()
-                final = '\n'.join(str(elem) for elem in my_list)
-                return(final)
+    def __str__(self):
+        """ creates a list of linked list, sorts, and prints"""
+        my_list = []
+        runner = self.__head
+        while runner is not None:
+            my_list.append(runner.data)
+            runner = runner.next_node
+        my_list.sort()
+        final = '\n'.join(str(elem) for elem in my_list)
+        return(final)
