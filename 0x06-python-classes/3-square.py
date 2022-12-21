@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""square module"""
+"""Square moodule"""
+
 
 class Square:
     """Defines a square"""
@@ -11,15 +12,15 @@ class Square:
         Args:
             size: the length of a square
 
-            Raises:
-                TypeError: if size is not an integer
-                ValueError: is size is less than 0
-            """
-            if not isinstance(size, int):
-                raise TypeError("size must be an integer")
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            self.__size = size
+        Raises:
+            TypeError: if size is not an integer
+            ValueError: is size is less than 0
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
     def area(self):
         """
