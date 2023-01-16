@@ -55,4 +55,5 @@ Test on None
 ::
 	>>> print_square(None)
 	Traceback (most recent call last):
-	TypeError: size must be an integer
+	TypeError: size must be an integeear
+
