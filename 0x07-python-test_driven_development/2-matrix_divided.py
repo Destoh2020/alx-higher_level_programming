@@ -6,7 +6,7 @@ def matrix_divided(matrix, div):
     """Divides elements of matrix wit div
 
     Args:
-        matrix: a list of numbers
+        matrix: a list of list of numbers
         div: a dividend
 
     Raises:
@@ -19,7 +19,7 @@ def matrix_divided(matrix, div):
         A list of lists numbers divide by div
     """
 
-    typerr = ' matrix must be a matrix (list of lists) of integers/floats'
+    typerr = 'matrix must be a matrix (list of lists) of integers/floats'
 
     if not matrix:
         raise TypeError(typerr)
