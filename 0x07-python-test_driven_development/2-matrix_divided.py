@@ -7,19 +7,19 @@ def matrix_divided(matrix, div):
 
     Args:
         matrix: a list of numbers
-        div: a dividend 
+        div: a dividend
 
     Raises:
        TypeError: if div is not a number
-       TypeError : if matrix is not a list of list numbers 
-       TypeError: if items of matrix are not of the same sixe
-       ZeroDivisionError: if iv is zero
+       TypeError : if matrix is not a list of list numbers
+       TypeError: if items of matrix are not of the same size
+       ZeroDivisionError: if div is zero
 
     Returns:
-        A list of list numbers divide by div 
+        A list of lists numbers divide by div
     """
 
-    typerr = ' matrix must be a matrix (list of list) of integrs /floats'
+    typerr = ' matrix must be a matrix (list of lists) of integers/floats'
 
     if not matrix:
         raise TypeError(typerr)
