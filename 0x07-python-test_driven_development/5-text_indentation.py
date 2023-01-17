@@ -16,7 +16,7 @@ def text_indentation(text):
 
     for delimeter in "?:.":
         text = (delimeter + "\n" * 2).join(
-            [line.strip(" ") for line in text.split(delimeter)]
-            )
+           [line.strip(" ") for line in text.split(delimeter)]
+           )
 
     print(text, end="")
